@@ -20,7 +20,11 @@ const Drawer = createDrawerNavigator();
 const Router = () => {
 
     return (
-      <Drawer.Navigator drawerContent={props=> <DrawerContent {...props}/>}
+      <Drawer.Navigator 
+       drawerContent={props=> <DrawerContent {...props}/>}
+       screenOptions={{ drawerLabelStyle:{fontSize: 20},
+        drawerActiveBackgroundColor:'#081A57', drawerActiveTintColor: '#fff',
+      drawerInactiveTintColor: '#333' }}
        initialRouteName='Home'>
       <Drawer.Screen name="Home" component={Home}  options={{
           drawerIcon: ({ focused, color, size }) => (
@@ -63,6 +67,7 @@ const Router = () => {
           <AjudaIcon width={size} height={size} color={color} />
         ),
       }}/>
+      
     </Drawer.Navigator>
       );
 
