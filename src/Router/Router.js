@@ -15,6 +15,8 @@ import ContasIcon from '../img/svg/ContasIcon';
 import AnotacaoIcon from '../img/svg/AnotacaoIcon';
 import CalculadoraIcon from '../img/svg/CalculadoraIcon';
 import AjudaIcon from '../img/svg/AjudaIcon';
+import Login from '../Telas/Login/Login';
+import Cadastro from '../Telas/Login/Cadastro';
 
 const Drawer = createDrawerNavigator();
 const Router = () => {
@@ -63,6 +65,12 @@ const Router = () => {
         ),
       }}/>
       <Drawer.Screen name="Mapa do App" component={Ajuda} options={{
+        drawerIcon: ({ focused, color, size }) => (
+          <AjudaIcon width={size} height={size} color={color} />
+        ),
+      }}/>
+      
+      <Drawer.Screen name="Sair do App" component={Login} options={{
         drawerIcon: ({ focused, color, size }) => (
           <AjudaIcon width={size} height={size} color={color} />
         ),

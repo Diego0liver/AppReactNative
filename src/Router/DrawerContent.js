@@ -4,7 +4,6 @@ import {  DrawerContentScrollView, DrawerItemList } from '@react-navigation/draw
 
 
 const DrawerContent = (props) => {
-  let sair = '< Sair do APP'
   return (
     <DrawerContentScrollView {...props}>
       <View style={{ paddingTop: 10, marginTop: 20}}>
@@ -14,11 +13,6 @@ const DrawerContent = (props) => {
       <DrawerItemList {...props}/>
       </View>
 
-      <View style={{ paddingTop: 10, marginLeft: 20}}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color:'#fff', backgroundColor: '#081A57', width: 110, padding:5, borderRadius: 5}}>
-            {sair}
-          </Text>
-      </View>
     </DrawerContentScrollView>
   );
 };
